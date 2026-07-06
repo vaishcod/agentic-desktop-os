@@ -1,0 +1,6 @@
+{
+  "name": "Sample Plugin",
+  "version": "1.0.0",
+  "description": "A demonstration plugin for Antigravity OS",
+  "permissions": ["read_files", "internet_access"]
+}
