@@ -1,5 +1,6 @@
 # Antigravity AI OS
 
+> 🔗 **Live Demo**: [vaishcod.github.io/agentic-desktop-os](https://vaishcod.github.io/agentic-desktop-os/)  
 > 🔗 **Project Repository**: [github.com/vaishcod/agentic-desktop-os](https://github.com/vaishcod/agentic-desktop-os)
 
 A production-quality autonomous AI desktop assistant platform designed for clarity and visual excellence. This project serves as a next-generation operating system layer, combining desktop automation, multi-agent AI, and a premium glassmorphic UI.
