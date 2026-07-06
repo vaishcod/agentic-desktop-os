@@ -1,5 +1,7 @@
 # Antigravity AI OS
 
+> 🔗 **Project Repository**: [github.com/vaishcod/antigravity-os](https://github.com/vaishcod/antigravity-os)
+
 A production-quality autonomous AI desktop assistant platform designed for clarity and visual excellence. This project serves as a next-generation operating system layer, combining desktop automation, multi-agent AI, and a premium glassmorphic UI.
 
 ## 🚀 Key Features
