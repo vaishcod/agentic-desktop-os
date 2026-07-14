@@ -3,7 +3,7 @@
   "private": true,
   "engines": {
   "node": "20.x"
-  }
+  },
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://vaishcod.github.io/agentic-desktop-os",
