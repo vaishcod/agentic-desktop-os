@@ -1,5 +1,9 @@
-import pyautogui
+try:
+    import pyautogui
+except Exception:
+    pyautogui = None
 from PIL import Image
+import os
 from typing import List, Optional
 from ..core.base import BaseAgent, ToolResult
 
@@ -16,10 +20,22 @@ class DesktopAgent(BaseAgent):
         for step in plan:
             action = step.get("action")
             if action == "capture_screenshot":
-                screenshot = pyautogui.screenshot()
-                # Save or process the screenshot
-                screenshot.save("latest_screenshot.png")
-                results.append({"action": action, "status": "success", "path": "latest_screenshot.png"})
+                if pyautogui is not None:
+                    try:
+                        screenshot = pyautogui.screenshot()
+                        # Save or process the screenshot
+                        screenshot.save("latest_screenshot.png")
+                        results.append({"action": action, "status": "success", "path": "latest_screenshot.png"})
+                    except Exception as e:
+                        # Fallback if screenshot fails despite pyautogui being imported
+                        img = Image.new('RGB', (800, 600), color=(73, 109, 137))
+                        img.save("latest_screenshot.png")
+                        results.append({"action": action, "status": "simulated", "path": "latest_screenshot.png", "error": str(e)})
+                else:
+                    # Headless fallback - create a dummy image
+                    img = Image.new('RGB', (800, 600), color=(73, 109, 137))
+                    img.save("latest_screenshot.png")
+                    results.append({"action": action, "status": "simulated", "path": "latest_screenshot.png"})
             elif action == "search_app":
                 query = step.get("params", {}).get("query")
                 # Simulated app search
