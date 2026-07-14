@@ -16,6 +16,8 @@ const SidebarItem = ({ icon: Icon, label, active, onClick }: any) => (
 
 export const Shell: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { currentPage, setCurrentPage } = useStore();
+
+  return (
     <div className="flex h-screen w-screen bg-background overflow-hidden p-4 gap-4">
       {/* Sidebar */}
       <motion.aside 
