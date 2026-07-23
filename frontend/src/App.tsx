@@ -4,6 +4,7 @@ import { Dashboard } from './pages/Dashboard'
 import { AIWorkspace } from './pages/AIWorkspace'
 import { MemoryExplorer } from './pages/MemoryExplorer'
 import { AutomationBuilder } from './pages/AutomationBuilder'
+import { Timeline } from './pages/Timeline'
 import { LandingPage } from './pages/LandingPage'
 import { Settings } from './pages/Settings'
 import { PerformanceDashboard } from './pages/PerformanceDashboard'
@@ -24,8 +25,10 @@ function App() {
         return <AIWorkspace />;
       case 'memory':
         return <MemoryExplorer />;
-      case 'timeline':
+      case 'automation':
         return <AutomationBuilder />;
+      case 'timeline':
+        return <Timeline />;
       case 'performance':
         return <PerformanceDashboard />;
       case 'settings':
